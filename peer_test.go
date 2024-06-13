@@ -2,13 +2,14 @@ package enet_test
 
 import (
 	"fmt"
-	"github.com/codecat/go-enet"
 	"os"
 	"os/exec"
 	"runtime"
 	"strconv"
 	"strings"
 	"testing"
+
+	"github.com/CLOEI/go-enet"
 )
 
 func TestPeerData(t *testing.T) {

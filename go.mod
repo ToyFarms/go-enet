@@ -1,3 +1,3 @@
-module github.com/codecat/go-enet
+module github.com/CLOEI/go-enet
 
 go 1.19

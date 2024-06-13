@@ -2,8 +2,9 @@ package enet_test
 
 import (
 	"fmt"
-	"github.com/codecat/go-enet"
 	"log"
+
+	"github.com/CLOEI/go-enet"
 )
 
 func Example_clientServer() {
