@@ -17,6 +17,7 @@ type Host interface {
 	BroadcastBytes(data []byte, channel uint8, flags PacketFlags) error
 	BroadcastPacket(packet Packet, channel uint8) error
 	BroadcastString(str string, channel uint8, flags PacketFlags) error
+	SetChecksumCRC32() error
 }
 
 type enetHost struct {
@@ -113,4 +114,9 @@ func (host *enetHost) BroadcastString(str string, channel uint8, flags PacketFla
 		return err
 	}
 	return host.BroadcastPacket(packet, channel)
+}
+
+func (host *enetHost) SetChecksumCRC32() error {
+	host.cHost.checksum = C.ENetChecksumCallback(C.enet_crc32)
+	return nil
 }
