@@ -75,3 +75,4 @@ func NewPacket(data []byte, flags PacketFlags) (Packet, error) {
 		cPacket: packet,
 	}, nil
 }
+
