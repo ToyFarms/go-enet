@@ -9,7 +9,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/CLOEI/go-enet"
+	"github.com/ToyFarms/go-enet"
 )
 
 func TestPeerData(t *testing.T) {

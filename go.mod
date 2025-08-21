@@ -1,3 +1,3 @@
-module github.com/CLOEI/go-enet
+module github.com/ToyFarms/go-enet
 
 go 1.23

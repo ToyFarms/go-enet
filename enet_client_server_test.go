@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/CLOEI/go-enet"
+	"github.com/ToyFarms/go-enet"
 )
 
 func Example_clientServer() {
