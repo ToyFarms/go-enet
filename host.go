@@ -20,6 +20,7 @@ type Host interface {
 	SetChecksumCRC32() error
 	UsingNewPacket() error
 	UsingNewPacketForServer() error
+	Flush() error
 }
 
 type enetHost struct {
@@ -131,4 +132,9 @@ func (host *enetHost) UsingNewPacket() error {
 func (host *enetHost) UsingNewPacketForServer() error {
 	host.cHost.usingNewPacketForServer = 1
 	return nil
+}
+
+func (host *enetHost) Flush() {
+	C.enet_host_flush(host.cHost)
+
 }
