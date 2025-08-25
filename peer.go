@@ -150,5 +150,5 @@ func (peer enetPeer) GetData() []byte {
 }
 
 func (peer enetPeer) Timeout(timeoutLimit uint32, timeoutMinimum uint32, timeoutMaximum uint32) {
-	C.enet_peer_timeout(peer.cPeer, timeoutLimit, timeoutMinimum, timeoutMaximum)
+	C.enet_peer_timeout(peer.cPeer, (C.enet_uint32)timeoutLimit, (C.enet_uint32)timeoutMinimum, (C.enet_uint32)timeoutMaximum)
 }
